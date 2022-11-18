@@ -10,7 +10,7 @@ export default function Product({product}) {
   console.log('xxx', product)
   const colors = ['red', 'blue', 'yellow', 'green']
   const sizes = ['S', 'M', 'L', 'XL']
-  const [selectedColor, setSelectedColor] = useState()
+  const [selectedColor, setSelectedColor] = useState(colors[1])
   return (
     <div className={styles.container}>
       <Head>
@@ -59,7 +59,12 @@ export default function Product({product}) {
               <br/>
               <div>
                 {colors.map((item)=>
-                  <span className={styles.colorItem} style={{background: item}} onClick={()=> setSelectedColor(item)}>
+                  <span
+                    key={item}
+                    className={styles.colorItem}
+                    style={{background: item}}
+                    onClick={()=> setSelectedColor(item)}
+                  >
                     {selectedColor === item && <span className={styles.active} style={{borderColor: item}} />}
                   </span>
                 )}
@@ -71,7 +76,7 @@ export default function Product({product}) {
               <div>
                 <select>
                   {sizes.map((item)=>
-                    <option>{item}</option>
+                    <option key={item}>{item}</option>
                   )}
                 </select>
               </div>
@@ -82,7 +87,7 @@ export default function Product({product}) {
               <div>
                 <select>
                   {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item)=>
-                    <option value={item}>({item})</option>
+                    <option key={item} value={item}>({item})</option>
                   )}
                 </select>
               </div>

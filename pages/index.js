@@ -15,7 +15,11 @@ export default function Home({products}) {
 
       <main className={styles.main}>
         {products.map((item)=>
-        <div className={styles.item} onClick={() => router.push('/products/' + item.id)}>
+        <div
+          key={item.id}
+          className={styles.item}
+          onClick={() => router.push('/products/' + item.id)}
+        >
           {item.title}
         </div>
         )}
