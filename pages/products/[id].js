@@ -36,6 +36,7 @@ export default function Product({product}) {
               rating={product.rating?.rate}
               starRatedColor="#d66767"
               starDimension={15}
+              starSpacing={2}
               numberOfStars={5}
               name='rating'
             />
