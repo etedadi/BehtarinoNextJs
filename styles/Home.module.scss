@@ -1,0 +1,33 @@
+$Text-dark : #555555;
+$Text-gray : #c4c3c3;
+
+.container {
+    background: #f5f5f5;
+    padding: 10vh 15%;
+}
+
+.main {
+    padding: 40px;
+    background: #ffffff;
+    overflow-x: auto;
+    height: 80vh;
+    border-radius: 20px;
+    box-shadow: 0 0 50px $Text-gray;
+    .item {
+        margin: 10px 24px;
+        padding: 8px 16px;
+        border-radius: 8px;
+        border: 1px solid #cacaca;
+    }
+}
+
+
+
+
+@media (max-width: 600px) {
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+}

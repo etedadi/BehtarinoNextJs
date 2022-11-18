@@ -1,0 +1,136 @@
+$Text-dark : #555555;
+$Text-gray : #c4c3c3;
+
+.container {
+    background: #f5f5f5;
+    padding: 10vh 15%;
+}
+
+.main {
+    background: #ffffff;
+    height: 80vh;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 0 0 50px $Text-gray;
+}
+
+.left {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    min-width: 250px;
+    background: rgb(4,200,198);
+    border-radius: 20px 0 0 20px;
+    .productImg{
+        height: auto;
+        width: 300px;
+        position: absolute;
+        transform: rotateZ(-25deg);
+        right: 80px;
+        top: 30%;
+        box-shadow: 0 0 50px $Text-gray;
+    }
+}
+
+.right{
+    width: 70%;
+    overflow-y: auto;
+    padding: 30px;
+    .title{
+        width: 70%;
+        font-size: 28px;
+        margin-bottom: 15px;
+        color: $Text-dark;
+    }
+    .modelName{
+        font-size: 14px;
+        margin-top: 0px;
+        color: $Text-gray;
+    }
+    .price{
+        strong:first-child{
+            color: $Text-dark;
+        }
+        strong:last-child{
+            color: #d66767;
+            margin-left: 15px;
+        }
+    }
+    .descriptionTitle{
+        font-size: 14px;
+        margin : 5px 0;
+        color: $Text-dark;
+    }
+    .descriptionText{
+        font-size: 13px;
+        color: $Text-gray;
+    }
+    .options{
+        display: flex;
+        .colorBox{
+            width: 200px;
+            padding-right: 40px;
+            border-right: 2px solid #eee;
+            .colorItem{
+                position: relative;
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                background: #fff;
+                border-radius: 100%;
+                margin-right: 15px;
+                padding: 2px;
+                .active{
+                    width: 28px;
+                    height: 28px;
+                    display: inline-block;
+                    border-radius: 100%;
+                    position: absolute;
+                    left: -4px;
+                    top: -4px;
+                    border: 2px solid #fff;
+                }
+            }
+        }
+        .sizeBox{
+           padding: 0 40px;
+           border-right: 2px solid #eee;
+        }
+    }
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .addButton{
+            cursor: pointer;
+            margin-top: auto;
+            display: flex;
+            width: auto;
+            padding: 12px 24px;
+            font-weight: 700;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(180deg, rgba(255,170,108,1) 0%, rgba(213,7,73,1) 100%);
+            border-radius: 8px;
+            color: white;
+            img{
+                margin-right: 15px;
+            }
+        }
+        .shareButton{
+            cursor: pointer;
+        }
+    }
+
+}
+
+
+
+
+@media (max-width: 600px) {
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+}

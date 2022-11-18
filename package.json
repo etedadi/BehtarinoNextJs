@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "set PORT=3008&& next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "PORT=3008 next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -14,5 +14,8 @@
     "next": "13.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.56.1"
   }
 }
