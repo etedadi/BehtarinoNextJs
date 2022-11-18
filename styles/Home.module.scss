@@ -32,6 +32,14 @@ $Text-gray : #c4c3c3;
 
 
 @media (max-width: 600px) {
+    .container{
+        padding: 30px;
+        .main{
+            box-shadow: 0 0 0 $Text-gray;
+            height: calc(100vh - 60px);
+            padding: 15px;
+        }
+    }
 
 }
 

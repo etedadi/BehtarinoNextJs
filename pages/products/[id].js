@@ -30,7 +30,7 @@ export default function Product({product}) {
            <img className={styles.productImg} src={product.image} />
         </div>
         <div className={styles.right}>
-          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+          <div className={styles.titleBox}>
             <h2 className={styles.title}>{product.title}</h2>
             <StarRatings
               rating={product.rating?.rate}
