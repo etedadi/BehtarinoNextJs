@@ -7,10 +7,10 @@ import share from '../../public/icons/share.png'
 import styles from '../../styles/Product.module.scss'
 
 export default function Product({product}) {
-  console.log('xxx', product)
-  const colors = ['red', 'blue', 'yellow', 'green']
+
+  const colors = [['#880e4f', '#d50000'], ['#304ffe', '#8c9eff'], ['#f57f17', '#ffff8d'], ['#00acc1', '#1de9b6']]
   const sizes = ['S', 'M', 'L', 'XL']
-  const [selectedColor, setSelectedColor] = useState(colors[1])
+  const [selectedColor, setSelectedColor] = useState(3)
   return (
     <div className={styles.container}>
       <Head>
@@ -23,8 +23,8 @@ export default function Product({product}) {
         <div
           className={styles.left}
           style={{
-            background: 'linear-gradient(0deg, rgba(4,200,198,0.7032563025210083) 0%, rgba(0,215,166,1) 100%)',
-            boxShadow: "-40px 40px 50px rgba(0,215,166,.25)"
+            background: `linear-gradient(0deg, ${colors[selectedColor][0]} 0%, ${colors[selectedColor][1]} 100%)`,
+            boxShadow: `-40px 40px 50px ${colors[selectedColor][0]}50 `
           }}
         >
            <img className={styles.productImg} src={product.image} />
@@ -58,14 +58,14 @@ export default function Product({product}) {
               <h5 className={styles.descriptionTitle}>Color</h5>
               <br/>
               <div>
-                {colors.map((item)=>
+                {colors.map((item, index)=>
                   <span
-                    key={item}
+                    key={index}
                     className={styles.colorItem}
-                    style={{background: item}}
-                    onClick={()=> setSelectedColor(item)}
+                    style={{background: colors[index][0]}}
+                    onClick={()=> setSelectedColor(index)}
                   >
-                    {selectedColor === item && <span className={styles.active} style={{borderColor: item}} />}
+                    {selectedColor === index && <span className={styles.active} style={{borderColor: colors[index][0]}} />}
                   </span>
                 )}
               </div>
